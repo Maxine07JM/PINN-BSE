@@ -1,6 +1,7 @@
 # PINN-BSE
 
 PINN-Battery-State-Estimation
+
 A Physics-Informed Neural Network (PFFNN) for batteries, featuring automated capacity calibration and polarization differential tracking.
 
 An advanced, production-ready Physics-Informed Neural Network (PINN) framework developed to resolve terminal voltage tracking and degradation diagnostics for next-generation organic dynamic battery systems (alkali metal-based).
