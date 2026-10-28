@@ -18,4 +18,4 @@ This repository is open-sourced under the MIT License.
 
 Due to privacy and copyright restrictions, the original dataset is not included in this repository. Please contact the author to request access or other information.
 
-(This is my very first open-source project, and I am still learning the ropes! Code optimization, bug fixes, or general feedback are all highly welcome. If you see something that could be improved, please feel free to open an Issue or submit a Pull Request. Thank you for your support and guidance! 🙏)
+(This is my very first open-source project, and I am still learning the ropes! Code optimization, bug fixes, or general feedback are all highly welcome. If you see something that could be improved, please feel free to open an Issue or submit a Pull Request. Thank you. )
