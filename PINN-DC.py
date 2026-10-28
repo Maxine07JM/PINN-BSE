@@ -14,7 +14,7 @@ plt.ion()
 
 # STEP 1
 
-NEW_BATTERY_CSV = r"D:\DE\BrCCDC\422-1030-1-org.csv"  
+NEW_BATTERY_CSV = r"location.csv"   #location
 df_new = pd.read_csv(NEW_BATTERY_CSV)
 
 df_new["Voltage/V"] = pd.to_numeric(df_new["Voltage/V"], errors='coerce')
