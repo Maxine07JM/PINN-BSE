@@ -28,7 +28,7 @@ num_points = len(v_np)
 
 SAMPLING_INTERVAL = 2.0    # time
 
-CURRENT_CAPACITY_AH = 2.07 
+CURRENT_CAPACITY_AH = 2.00 
 cap_as = CURRENT_CAPACITY_AH * 3600.0
 
 max_v_idx = np.argmax(v_np)
@@ -39,15 +39,17 @@ cumulative_ah = np.cumsum(delta_ah)
 # Highest
 total_ah_trend = float(cumulative_ah[max_v_idx]) - float(cumulative_ah[0])
 
-if total_ah_trend < 0:
-    i_np = -i_np     # DC or CD
+# if total_ah_trend < 0:
+    i_np = -i_np   
+#
 
 delta_ah = (i_np * SAMPLING_INTERVAL) / 3600.0
 cumulative_ah = np.cumsum(delta_ah)
 soc_np = 1.0 - (cumulative_ah[max_v_idx] - cumulative_ah) / CURRENT_CAPACITY_AH
 soc_np = np.clip(soc_np, 0.0, 1.0)
 
-# (Gated dI/dt）GPT
+# (Gated ) GPT
+
 i_diff = np.zeros_like(i_np)
 raw_diff = i_np[1:] - i_np[:-1]
 i_diff[1:] = np.where(np.abs(raw_diff) > 0.5, raw_diff, 0.0)
